@@ -31,25 +31,25 @@ module.exports = {
          {
             test: /\.styl$/,
             use: [
-               {
-                  loader: MiniCssExtractPlugin.loader
-               },
+               // {
+               //    loader: MiniCssExtractPlugin.loader
+               // },
                'css-loader',
                'style-loader',
                'stylus-loader'
             ]
+         },
+         {
+            test: /\.(png|gif|jpg)$/,
+            use: [
+               {
+                  loader: "file-loader",
+                  options: {
+                     name: 'assets/[hash].[ext]'
+                  }
+               }
+            ]
          }
-         // {
-         //    test: /\.(png|gif|jpg)$/,
-         //    use: [
-         //       {
-         //          loader: "file-loader",
-         //          options: {
-         //             name: 'assets/[hash].[ext]'
-         //          }
-         //       }
-         //    ]
-         // }
       ]
    },
    plugins: [

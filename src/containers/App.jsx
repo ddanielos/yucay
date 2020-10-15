@@ -1,8 +1,9 @@
 import React from 'react';
+import EnConstruccion from '../components/EnConstruccion';
 
 const App = () => {
    return (
-      <h1>Hola Yucay Brewery</h1>
+      <EnConstruccion />
    )
 };
 
